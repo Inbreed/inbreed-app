@@ -5,9 +5,9 @@ App.service('LoadInbreed', ['$http', LoadInbreed]);
 function LoadInbreed($http) {
     this.getContent = function ($scope) {
         $http.get('test.json').success(function (result) {
-          $scope.tabs   = result.tabs;
-          $scope.bandinfo = result.bands;
-          $scope.header = result.header;
+          $scope.tabs     = result.tabs;
+          $scope.schema   = result.schema;
+          $scope.header	  = result.header;
         }).error(function (result) {
         });
     };

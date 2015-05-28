@@ -15,31 +15,31 @@
             "content":""
         }
     ],
-    "bands":
+    "schema":
     [
-        {
-            "name": "First",
-            "img": "img/logo_flow_tmp.png",
-            "desc": "Description the first",
-            "time": "TBA"
-        },
-        {
-            "name": "Second",
-            "img": "img/logo_flow_tmp.png",
-            "desc": "Description the second",
-            "time": "TBA"
-        },
-        {
-            "name": "Third",
-            "img": "img/logo_flow_tmp.png",
-            "desc": "Description the third",
-            "time": "TBA"
-        },
-        {
-            "name": "Four",
-            "img": "img/logo_flow_tmp.png",
-            "desc": "Description the fourth",
-            "time": "TBA"
-        }
+		{
+			"name": "First",
+			"img": "img/logo_flow_tmp.png",
+			"desc": "Description the first",
+			"time": "TBA"
+		},
+		{
+			"name": "Second",
+			"img": "img/logo_flow_tmp.png",
+			"desc": "Description the second",
+			"time": "TBA"
+		},
+		{
+			"name": "Third",
+			"img": "img/logo_flow_tmp.png",
+			"desc": "Description the third",
+			"time": "TBA"
+		},
+		{
+			"name": "Four",
+			"img": "img/logo_flow_tmp.png",
+			"desc": "Description the fourth",
+			"time": "TBA"
+		}
     ]
 }
