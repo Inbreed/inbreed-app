@@ -1,0 +1,45 @@
+{
+    "version": 4,
+    "header": "https://raw.githubusercontent.com/Inbreed/inbreed.github.io/master/img/logo.png",
+    "tabs":
+    [
+        {
+            "title": "Start",
+            "content":"Följs inte dessa regler har både crew och vakter rätt att klippa ditt festivalarmband och avvisa dig från festivalområdet.I:O:A har en maxbegränsning när det gäller publikkapacitet. Är det viktigt för dig att se ett band – kom i tid. Är området fullt så har du ändå möjlighet att se bandet, eftersom scenen också syns från utanför området."
+        },
+        {
+            "title": "Lineup"
+        },
+        {
+            "title": "Hitta hit",
+            "content":""
+        }
+    ],
+    "bands":
+    [
+        {
+            "name": "First",
+            "img": "img/logo_flow_tmp.png",
+            "desc": "Description the first",
+            "time": "TBA"
+        },
+        {
+            "name": "Second",
+            "img": "img/logo_flow_tmp.png",
+            "desc": "Description the second",
+            "time": "TBA"
+        },
+        {
+            "name": "Third",
+            "img": "img/logo_flow_tmp.png",
+            "desc": "Description the third",
+            "time": "TBA"
+        },
+        {
+            "name": "Four",
+            "img": "img/logo_flow_tmp.png",
+            "desc": "Description the fourth",
+            "time": "TBA"
+        }
+    ]
+}
