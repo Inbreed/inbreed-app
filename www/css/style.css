@@ -16,6 +16,16 @@ iframe {
   height: 100%;
 }
 
+body {
+    background-color: black;
+    font-style: white;
+}
+
+.tab-nav {
+    border-bottom: 1px;
+    border-color: #FE14FE;
+}
+
 .modalPost {
 	padding: 0 20px;
 }

@@ -20,7 +20,7 @@
         "title": "First test post",
         "img": "",
         "short": "Made a short little intro to the news",
-        "content": "Here is a longer version of that post to test that everything is loading correctly, in the correct places."
+        "content": "<p>Here is a longer version of that post to test that everything is</p> <p>loading correctly, in the correct places.</p>"
       },
       {
         "title": "Second test, with img",
