@@ -28,37 +28,58 @@
 
       <ion-tab title="{{tabs[0].title}}">
         <!-- Tab 1 content -->
-        <p>{{tabs[0].content}}</p>
+        <ion-content has-header="true">
+          <ion-list>
+            <ion-item class="no-padding" ng-repeat="post in news" ng-click="openNewsModal(); setNewsIndex($index)">
+              <img ng-if="post.img" src="{{post.img}}">
+              <h2 class="listPost">{{post.title}}</h2>
+              <p class="listPost">{{post.short}}</p>
+            </ion-item>
+          </ion-list>
       </ion-tab>
 
       <ion-tab title="{{tabs[1].title}}">
-        <!-- Tab 2 content -->
+      <!-- Tab 2 content -->
         <ion-content has-header="true">
-         <ion-list>
-             <ion-item class="no-padding" ng-repeat="band in schema" ng-click="openModal(); setSelectedBand($index)">
-                <img src="{{band.img}}">
-                <h2>{{band.name}}</h2>
-                <p>Playing: {{band.time}}</p>
-			</ion-item>
-           </ion-list>
+          <ion-list>
+            <ion-item class="no-padding" ng-repeat="band in schema" ng-click="openBandModal(); setBandIndex($index)">
+              <img src="{{band.img}}">
+              <h2 class="listPost">{{band.name}}</h2>
+              <p class="listPost">Playing: {{band.time}}</p>
+            </ion-item>
+          </ion-list>
       </ion-tab>
 
       <ion-tab title="{{tabs[2].title}}">
         <!-- Tab 3 content -->
-            <a href="#" ng-click="openMapModal();">MAP</a>
+            <div ng-click="openMapModal();">MAP</div>
 	  </ion-tab>
 
     </ion-tabs>
-    <script id="band_closeup.html" type="text/ng-template">
+    <script id="news.html" type="text/ng-template">
         <div class="modal">
             <ion-header-bar class="bar-secondary">
-                <h1 class="title">{{bandinfo[selectedBand].name}}</h1>
-                <button class="button button-clear icon-right ion-android-cancel" ng-click="closeModal()"></button>
+                <h1 class="title">{{news[newsIndex].title}}</h1>
+                <button class="button button-clear icon-right ion-android-cancel" ng-click="closeNewsModal()"></button>
             </ion-header-bar>
             <ion-content>
             <div>
-                <img src="{{schema[selectedBand].img}}">
-                <p>{{schema[selectedBand].desc}}</p>
+                <img ng-if="news[newsIndex].img" src="{{news[newsIndex].img}}">
+                <p class="modalPost">{{news[newsIndex].content}}</p>
+            </div>
+            </ion-content>
+        </div>
+    </script>
+    <script id="band_closeup.html" type="text/ng-template">
+        <div class="modal">
+            <ion-header-bar class="bar-secondary">
+                <h1 class="title">{{schema[bandIndex].name}}</h1>
+                <button class="button button-clear icon-right ion-android-cancel" ng-click="closeBandModal()"></button>
+            </ion-header-bar>
+            <ion-content>
+            <div>
+                <img src="{{schema[bandIndex].img}}">
+                <p class="modalPost">{{schema[bandIndex].desc}}</p>
             </div>
             </ion-content>
         </div>
