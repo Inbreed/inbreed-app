@@ -14,7 +14,6 @@ function LoadInbreed($http) {
           $scope.tabs   = result.tabs;
           $scope.news   = result.news;
           $scope.schema = result.schema;
-          $scope.header	= result.header;
         }).error(function (result) {
         });
     };
