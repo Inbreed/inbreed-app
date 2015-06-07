@@ -19,27 +19,32 @@
     "news":
     [
       {
+        "title": "First test post",
+        "img": "",
+        "short": "Made a short little intro to the news",
+        "content": "Here is a longer version of that post to test that everything is loading correctly, in the correct places."
+      },
+      {
+        "title": "Second test, with img",
+        "img": "img/logo_flow_tmp.png",
+        "short": "Short info on news post with img",
+        "content": "Longer post regarding the post with the image."
+      },
+      {
+        "title": "Third post",
+        "img": "",
+        "short": "No image in this post either",
+        "content": "Here is a longer version of that post to test that everything is loading correctly, in the correct places. Here is a longer version of that post to test that everything is loading correctly, in the correct places. Here is a longer version of that post to test that everything is loading correctly, in the correct places."
+      },
+      {
         "title": "",
+        "img": "",
         "short": "",
         "content": ""
       },
       {
         "title": "",
-        "short": "",
-        "content": ""
-      },
-      {
-        "title": "",
-        "short": "",
-        "content": ""
-      },
-      {
-        "title": "",
-        "short": "",
-        "content": ""
-      },
-      {
-        "title": "",
+        "img": "",
         "short": "",
         "content": ""
       }

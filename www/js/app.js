@@ -11,9 +11,10 @@ App.service('LoadInbreed', ['$http', LoadInbreed]);
 function LoadInbreed($http) {
     this.getContent = function ($scope) {
         $http.get('test.json').success(function (result) {
-          $scope.tabs     = result.tabs;
-          $scope.schema   = result.schema;
-          $scope.header	  = result.header;
+          $scope.tabs   = result.tabs;
+          $scope.news   = result.news;
+          $scope.schema = result.schema;
+          $scope.header	= result.header;
         }).error(function (result) {
         });
     };
@@ -21,12 +22,12 @@ function LoadInbreed($http) {
 
 App.controller('InbreedCtrl', function ($scope, $ionicSideMenuDelegate, $ionicModal, $ionicSlideBoxDelegate, LoadInbreed) {
 
-    $scope.setSelectedNews = function (index) {
-        $scope.selectedNews = index;
+    $scope.setNewsIndex = function (index) {
+        $scope.newsIndex = index;
     };
 
-    $scope.setSelectedBand = function (index) {
-        $scope.selectedBand = index;
+    $scope.setBandIndex = function (index) {
+        $scope.bandIndex = index;
     };
 
     $scope.refresh  = LoadInbreed.getContent($scope);
