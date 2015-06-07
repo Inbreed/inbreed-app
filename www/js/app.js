@@ -1,11 +1,13 @@
+// Initialize angular
 var App = angular.module('Inbreed', ['ionic']);
 
+// Fix for android issue with tabs
 App.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
     $ionicConfigProvider.tabs.position('bottom');
 });
 
+// Load content
 App.service('LoadInbreed', ['$http', LoadInbreed]);
-
 function LoadInbreed($http) {
     this.getContent = function ($scope) {
         $http.get('test.json').success(function (result) {
@@ -19,37 +21,47 @@ function LoadInbreed($http) {
 
 App.controller('InbreedCtrl', function ($scope, $ionicSideMenuDelegate, $ionicModal, $ionicSlideBoxDelegate, LoadInbreed) {
 
+    $scope.setSelectedNews = function (index) {
+        $scope.selectedNews = index;
+    };
+
     $scope.setSelectedBand = function (index) {
         $scope.selectedBand = index;
     };
 
-    $scope.currentSlide = 0;
-
-    $scope.isActive = function (item) {
-        return $scope.currentSlide == item;
-    };
-
     $scope.refresh  = LoadInbreed.getContent($scope);
 
-    $scope.setActiveSlide = function (index) {
-        $ionicSlideBoxDelegate.slide(index);
-        $scope.currentSlide = index;
-    };
-
-    $ionicModal.fromTemplateUrl('band_closeup.html', function (modal) {
-        $scope.taskModal = modal;
+    // News modal
+    $ionicModal.fromTemplateUrl('news.html', function (modal) {
+        $scope.NewsModal = modal;
     }, {
         scope: $scope
     });
 
-    $scope.openModal = function () {
-        $scope.taskModal.show();
+    $scope.openNewsModal = function () {
+        $scope.NewsModal.show();
     };
 
-    $scope.closeModal = function () {
-        $scope.taskModal.hide();
+    $scope.closeNewsModal = function () {
+        $scope.NewsModal.hide();
     };
 
+    // Band modal
+    $ionicModal.fromTemplateUrl('band_closeup.html', function (modal) {
+        $scope.bandModal = modal;
+    }, {
+        scope: $scope
+    });
+
+    $scope.openBandModal = function () {
+        $scope.bandModal.show();
+    };
+
+    $scope.closeBandModal = function () {
+        $scope.bandModal.hide();
+    };
+
+    // Map modal
     $ionicModal.fromTemplateUrl('map.html', function (modal) {
         $scope.mapModal = modal;
     }, {

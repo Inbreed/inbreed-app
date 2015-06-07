@@ -28,19 +28,26 @@
 
       <ion-tab title="{{tabs[0].title}}">
         <!-- Tab 1 content -->
-        <p>{{tabs[0].content}}</p>
+        <ion-content has-header="true">
+          <ion-list>
+            <ion-item class="no-padding" ng-repeat="post in news" ng-click="openNewsModal(); setSelectedNews($index)">
+              <img src="{{post.img}}">
+              <h2>{{post.title}}</h2>
+              <p>{{post.short}}</p>
+            </ion-item>
+          </ion-list>
       </ion-tab>
 
       <ion-tab title="{{tabs[1].title}}">
-        <!-- Tab 2 content -->
+      <!-- Tab 2 content -->
         <ion-content has-header="true">
-         <ion-list>
-             <ion-item class="no-padding" ng-repeat="band in schema" ng-click="openModal(); setSelectedBand($index)">
-                <img src="{{band.img}}">
-                <h2>{{band.name}}</h2>
-                <p>Playing: {{band.time}}</p>
-			</ion-item>
-           </ion-list>
+          <ion-list>
+            <ion-item class="no-padding" ng-repeat="band in schema" ng-click="openBandModal(); setSelectedBand($index)">
+              <img src="{{band.img}}">
+              <h2>{{band.name}}</h2>
+              <p>Playing: {{band.time}}</p>
+            </ion-item>
+          </ion-list>
       </ion-tab>
 
       <ion-tab title="{{tabs[2].title}}">
@@ -52,8 +59,8 @@
     <script id="band_closeup.html" type="text/ng-template">
         <div class="modal">
             <ion-header-bar class="bar-secondary">
-                <h1 class="title">{{bandinfo[selectedBand].name}}</h1>
-                <button class="button button-clear icon-right ion-android-cancel" ng-click="closeModal()"></button>
+                <h1 class="title">{{schema[selectedBand].name}}</h1>
+                <button class="button button-clear icon-right ion-android-cancel" ng-click="closeBandModal()"></button>
             </ion-header-bar>
             <ion-content>
             <div>
