@@ -1,5 +1,9 @@
 var App = angular.module('Inbreed', ['ionic']);
 
+App.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+    $ionicConfigProvider.tabs.position('bottom');
+});
+
 App.service('LoadInbreed', ['$http', LoadInbreed]);
 
 function LoadInbreed($http) {
